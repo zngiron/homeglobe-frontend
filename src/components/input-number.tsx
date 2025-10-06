@@ -10,7 +10,7 @@ export function InputNumber({ value = 0, onValueChange }: InputNumberProps) {
     <Select onValueChange={(value) => onValueChange?.(Number(value))}>
       <SelectTrigger
         defaultValue={value}
-        className="w-full cursor-pointer"
+        className="w-full border bg-muted cursor-pointer hover:bg-white"
       >
         <SelectValue placeholder={value} />
       </SelectTrigger>
@@ -21,6 +21,7 @@ export function InputNumber({ value = 0, onValueChange }: InputNumberProps) {
           <SelectItem
             key={i.toString()}
             value={i.toString()}
+            className="cursor-pointer"
           >
             {i.toString()}
           </SelectItem>

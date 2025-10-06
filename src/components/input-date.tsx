@@ -27,7 +27,7 @@ export function InputDate({ value, onValueChange, disabledBefore, align = 'start
         <Button
           type="button"
           variant="secondary"
-          className="justify-start cursor-pointer"
+          className="justify-start cursor-pointer border hover:bg-white"
         >
           {value ? format(value, 'MMMM d, yyyy') : 'Add Date'}
         </Button>

@@ -62,7 +62,7 @@ export function ServiceForm() {
               <FormControl>
                 <Input
                   {...field}
-                  className="bg-muted"
+                  className="bg-muted hover:bg-white"
                   placeholder="Anywhere"
                 />
               </FormControl>
