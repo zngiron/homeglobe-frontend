@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import { Open_Sans } from 'next/font/google';
 
@@ -17,6 +17,13 @@ const openSans = Open_Sans({
     '700',
   ],
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_DOMAIN || 'http://localhost:3000'),
@@ -46,7 +53,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
     <html lang="en">
       <body className={`${openSans.variable}`}>
         <Providers>
-          <main className="flex flex-col h-full grow">{children}</main>
+          <main className="flex flex-col h-full grow ">{children}</main>
         </Providers>
       </body>
     </html>

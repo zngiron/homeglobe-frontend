@@ -63,7 +63,7 @@ export function InputLocation({ value, onValueChange }: InputLocationProps) {
         </Button>
       </PopoverTrigger>
       <PopoverContent
-        className="w-full min-w-sm p-0"
+        className="w-full min-w-80 p-0 md:min-w-sm"
         align="start"
       >
         <Command>
