@@ -4,6 +4,8 @@ import { Open_Sans } from 'next/font/google';
 
 import '@/app/globals.css';
 
+import { Providers } from '@/components/providers';
+
 const openSans = Open_Sans({
   variable: '--font-open-sans',
   subsets: [
@@ -43,7 +45,9 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang="en">
       <body className={`${openSans.variable}`}>
-        <main className="flex flex-col h-full grow">{children}</main>
+        <Providers>
+          <main className="flex flex-col h-full grow">{children}</main>
+        </Providers>
       </body>
     </html>
   );

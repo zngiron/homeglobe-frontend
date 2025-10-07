@@ -7,10 +7,10 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { InputDate } from '@/components/input-date';
+import { InputLocation } from '@/components/input-location';
 import { InputNumber } from '@/components/input-number';
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
 
 const formSchema = z.object({
   location: z.string().min(1, {
@@ -60,10 +60,9 @@ export function ServiceForm() {
             <FormItem className="col-span-full">
               <FormLabel>Location</FormLabel>
               <FormControl>
-                <Input
-                  {...field}
-                  className="bg-muted hover:bg-white"
-                  placeholder="Anywhere"
+                <InputLocation
+                  value={field.value}
+                  onValueChange={field.onChange}
                 />
               </FormControl>
               <FormMessage />

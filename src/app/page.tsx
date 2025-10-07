@@ -63,6 +63,7 @@ export default async function Page({ searchParams }: PageProps<'/'>) {
               height={1000}
               alt="HomeGlobe"
               draggable={false}
+              priority
             />
           </picture>
         </div>
