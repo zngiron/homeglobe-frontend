@@ -14,7 +14,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 
 const formSchema = z.object({
   location: z.string().min(1, {
-    message: 'Location is required',
+    message: 'Please select a location',
   }),
   from: z.string().min(1, {
     message: 'Check-in date is required',

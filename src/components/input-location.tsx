@@ -18,7 +18,7 @@ interface InputLocationProps {
 }
 
 export function InputLocation({ value, onValueChange }: InputLocationProps) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const [debouncedSearch, setDebouncedSearch] = useState('');
 
